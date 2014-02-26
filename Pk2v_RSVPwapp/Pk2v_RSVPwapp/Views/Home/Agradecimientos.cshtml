@@ -1,0 +1,63 @@
+﻿@model Pk2v_RSVPwapp.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site2.css" />
+    <title>Agradecimientos</title>
+</head>
+<body background="~/Content/cerveza.jpg">
+    
+    @{
+        try{
+            WebMail.SmtpServer = "smtp.gmail.com";
+            WebMail.SmtpPort = 587;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "zulmatec@gmail.com";
+            WebMail.Password = "63402717";
+            WebMail.From = "zulmatec@gmail.com";
+
+            WebMail.Send("zulmatec@gmail.com", "Notificación RSVP",
+                Model.Name + ((Model.WillAttend ?? false) ? "" : "no") + "Atendera");
+        }
+        catch(Exception){
+        @:<center><b id="error">Error: No se pudo enviar el correo para confirmar</b></center>
+        }
+        
+    }
+
+    <center></center>
+    <div id="prueba2">
+        <span class="blink">
+        <h1><center>¡Gracias, @Model.Name!</center></h1>
+            <h2>
+        @if (Model.WillAttend == true) 
+        { 
+            @:¡Que bueno que vendras, las chelas estaran listas en el refri!.
+                <img src="~/Content/carita1.jpg" />
+        }
+        else
+        {
+            @:¡Siento mucho que no puedas venir! :(, Pero muchas gracias por informarlo.
+                <img src="~/Content/carita2.jpg" />
+        }
+            </h2>
+        </span>
+        <p>
+            <center>
+             @Html.ActionLink("Inicio", "Index");
+            </center>
+        </p>
+    </div>
+    <bgsound src="~/Content/06 feel this moment - pitbull ft christina aguilera.mp3" />
+       
+       <embed src="~/Content/06 feel this moment - pitbull ft christina aguilera.mp3" loop="infinite" autostart="true" width="200" height="100" />
+    </center>
+</body>
+</html>

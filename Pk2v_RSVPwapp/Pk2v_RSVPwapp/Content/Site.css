@@ -1,0 +1,43 @@
+﻿body {
+background-color:#FE2E64;
+border:ridge;
+}
+
+#prueba{
+    background:url('~/Content/carita1.jpg');
+    background-color:#64FE2E;
+    border:10px solid black;
+    padding: 40px;
+    margin: 360px;
+}
+#inicio {
+color:#FE2E64;
+font-style:normal;
+font-family:'Comic Sans MS';
+background:#64FE2E;
+}
+#logo {
+width:20px;
+float:none;
+text-align:center;
+margin-top:10px;
+}
+
+
+.field validation-error {
+    color:#FE2E2E;
+}
+.field validation-valid {
+    display:none;
+}
+.input-validation-error {
+    border:1px solid #3ADF00;
+    background-color:#00FF80;
+}
+.validation-summary-errors {
+    font-weight: bold;
+    color:#3ADF00;
+}
+.validation-summary-valid {
+    display:none;
+}

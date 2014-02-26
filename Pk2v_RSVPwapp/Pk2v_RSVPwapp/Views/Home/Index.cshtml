@@ -1,0 +1,36 @@
+﻿@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site1.css" />
+    <title>Index</title>
+</head>
+<body background="~/Content/fiesta_simpsons.jpg">
+    <h1 id="bienvenida"><center><b>Bienvenidos</b></center></h1><p>
+        <H2><center>Examen Unidad I</center></H2>
+        <marquee bgcolor="#FF0080"><H3>Gonzalez Hernandez Zulma Sarai 9TA</H3></marquee>
+     
+   <center>
+    <div id="titulo">
+
+        <h4  id="prueba">
+           
+        <center><b>@ViewBag.Greeting Amigo</b></center>
+        <p>Vamos a tener una fiesta increible</br>
+
+        </p>
+        @Html.ActionLink("RSVP Ahora", "Rsvpfrom");
+        </h4>
+    </div> 
+
+       <bgsound src="~/Content/06 feel this moment - pitbull ft christina aguilera.mp3" />
+       
+       <embed src="~/Content/06 feel this moment - pitbull ft christina aguilera.mp3" loop="infinite" autostart="true" width="200" height="100" />
+   </center>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿body {
+    border-style:ridge;
+}
+
+#prueba2 {
+color:#D7DF01;
+background-color:#FA58AC;
+border: 10px solid black;
+padding: 70px;
+margin: 200px;
+}
+
+#error {
+color:coral;
+font-family:'Franklin Gothic Book';
+font-size:24px;
+}
+
+.blink {
+
+text-decoration:solid;
+}

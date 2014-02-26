@@ -1,0 +1,56 @@
+﻿@model Pk2v_RSVPwapp.Models.GuestResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
+    <title>RsvpFrom</title>
+</head>
+<body>
+    
+
+   
+    @using (Html.BeginForm())
+    
+    { 
+        @*validacion de formulario*@
+        @Html.ValidationSummary()
+
+        <h1 id="inicio"><center><b>Introduce tus Datos</b></center></h1>
+<h4 id="prueba">
+
+    <div id="logo">
+        <center><img src="~/Content/carita1.jpg" /></center>
+    </div>
+    
+    <p>Tu nombre:@Html.TextBoxFor(x => x.Name)</p>
+    <p>Tu correo electronico:@Html.TextBoxFor(x => x.Email)</p>
+    <p>Tu telefono:@Html.TextBoxFor(x => x.Phone)</p>
+    <p>
+
+        ¿Asistiras a la fiesta?
+        @Html.DropDownListFor(x => x.WillAttend,
+        new[]
+        {
+            new SelectListItem(){Text="Si, Ahi estare",
+            Value = bool.TrueString},
+            new SelectListItem(){Text="No, no podre asistir",
+            Value= bool.FalseString}
+        },
+        "Escoge una opcion")
+    </p>
+        <center><input type="submit" value="submit RSVP" /></center>
+        </h4>
+    }
+
+    <bgsound src="~/Content/06 feel this moment - pitbull ft christina aguilera.mp3" />
+       
+       <embed src="~/Content/06 feel this moment - pitbull ft christina aguilera.mp3" loop="infinite" autostart="true" width="200" height="100" />
+</body>
+</html>
